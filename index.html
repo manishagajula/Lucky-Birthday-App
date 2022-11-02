@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>lucky birthday</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Is your birthday lucky ?</h1>
+      </header>
+      <section id="inputArea">
+        <div>
+          <input type="date" required id="dateInput" />
+        </div>
+        <div>
+          <input
+            type="number"
+            id="numberInput"
+            required
+            min="1"
+            placeholder="Enter your lucky number"
+          />
+        </div>
+        <button id="submitBtn">
+          Check <i class="fas fa-arrow-circle-right"></i>
+        </button>
+        <button id="resetBtn">
+          Reset <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </section>
+
+      <section id="resultArea">
+        <div class="result-card">
+          <div id="result"></div>
+        </div>
+      </section>
+      <div id="privacyMsg">
+        <h3>Privacy Policy</h3>
+        <p>
+          Kindly note that we do not store any kind of data of our users. This
+          app is solely based on client side scripting language, there is no
+          database linked to store any kind of data.
+        </p>
+        <button id="close-button">X</button>
+      </div>
+    </main>
+
+    <footer>
+      <div>Made with 💛 by Manisha Gajula</div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
