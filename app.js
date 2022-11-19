@@ -1,7 +1,7 @@
 let dateInput = document.querySelector("#dateInput");
 let numberInput = document.querySelector("#numberInput");
 let submitBtn = document.querySelector("#submitBtn");
-const resetBtn = document.querySelector("#resetBtn");
+let resetBtn = document.querySelector("#resetBtn");
 let resultText = document.querySelector("#result");
 let privacyMsg = document.querySelector("#privacyMsg");
 let btnClose = document.querySelector("#close-button");
@@ -80,11 +80,10 @@ function hidePrivacy() {
 }
 
 function resetAll() {
-  // dateInput.value = "";
-  // numberInput.value = "";
+  dateInput.value = "";
+  numberInput.value = "";
   // footer.style.position = "fixed";
-  // resultCard.style.display = "none";
-  console.log("reset");
+  resultCard.style.display = "none";
 }
 
 submitBtn.addEventListener("click", btnClickHandler);
