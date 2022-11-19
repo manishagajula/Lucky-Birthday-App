@@ -1,17 +1,15 @@
 let dateInput = document.querySelector("#dateInput");
 let numberInput = document.querySelector("#numberInput");
 let submitBtn = document.querySelector("#submitBtn");
+const resetBtn = document.querySelector("#resetBtn");
 let resultText = document.querySelector("#result");
 let privacyMsg = document.querySelector("#privacyMsg");
 let btnClose = document.querySelector("#close-button");
 let footer = document.querySelector(".footer");
 let resultCard = document.querySelector(".result-card");
-const privacy = document.querySelector(".privacy");
-const resetBtn = document.querySelector("#resetBtn");
 
 window.addEventListener("load", hidePrivacyMsg);
 // privacyMsg.style.display = "none";
-resultCard.style.display = "none";
 
 function hidePrivacyMsg() {
   setTimeout(function () {
@@ -51,21 +49,22 @@ function btnClickHandler() {
     console.log("Sum is ", sum);
 
     const result = sum % luckyNumber === 0 ? true : false;
+    console.log({ result });
 
     if (result) {
       resultText.innerHTML = `
     <p>Congratulations! your birthday is lucky. </p>
-    <img src="lucky-giphy.gif" width="300px" height="250px" alt="celebration gif">
+    <img src="./images/lucky-gif.gif" width="300px" height="250px" alt="celebration gif">
     `;
     } else {
       resultText.innerHTML = `
     <p>Sorry, your birthday is not lucky.</p
     <p>You missed by ${sum % luckyNumber} days</p>
-    <img src="unlucky-giphy.gif" width="300px" height="250px" alt="sad gif">
+    <img src="./images/sad-giphy.gif" width="300px" height="250px" alt="sad gif">
     `;
     }
 
-    footer.style.position = "static";
+    // footer.style.position = "static";
     resultCard.style.display = "block";
   } else if (dateValue === "" && luckyNumber === "") {
     alert("Please enter both the input values");
@@ -81,13 +80,13 @@ function hidePrivacy() {
 }
 
 function resetAll() {
-  dateInput.value = "";
-  numberInput.value = "";
-  resultCard.style.display = "none";
-  footer.style.position = "fixed";
+  // dateInput.value = "";
+  // numberInput.value = "";
+  // footer.style.position = "fixed";
+  // resultCard.style.display = "none";
+  console.log("reset");
 }
 
 submitBtn.addEventListener("click", btnClickHandler);
 btnClose.addEventListener("click", hidePrivacy);
-privacy.addEventListener("click", displayPrivacyMsg);
 resetBtn.addEventListener("click", resetAll);

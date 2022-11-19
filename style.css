@@ -6,7 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: url("https://images.unsplash.com/photo-1578922864601-79dcc7cbcea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-image: url("https://images.unsplash.com/photo-1455732063391-5f50f4df1854?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,6 +14,11 @@ body {
   /* height: 100%; */
   color: #fff;
   margin: 0;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 header,
@@ -24,7 +29,7 @@ section {
 }
 
 header h1 {
-  padding-top: 6rem;
+  padding-top: 2rem;
   font-size: 2.4rem;
   color: #0e2de6;
   text-shadow: BLACK;
@@ -47,6 +52,19 @@ button {
   cursor: pointer;
 }
 
+#resultArea {
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #submitBtn {
   font-size: 1.2rem;
   background-color: #0e2de6;
@@ -62,6 +80,10 @@ button {
 #close-button {
   padding: 0.2rem 0.5rem;
   border: none;
+}
+
+img {
+  border-radius: 0.5rem;
 }
 
 #privacyMsg {
@@ -84,13 +106,14 @@ button {
   border: 1px solid white;
   border-radius: 0.5rem;
   /* margin-top: 1.5rem; */
-  background-color: #013220;
+  /* background-color: #013220; */
+  color: blue;
   font-weight: bold;
   font-size: 1.2rem;
-  max-width: 400px;
+  max-width: 600px;
   /* margin: 1.5rem auto; */
   margin: auto;
-  padding: 1rem;
+  padding: 0rem 1rem;
   box-sizing: border-box;
 }
 
@@ -103,7 +126,7 @@ button {
 footer {
   background-color: #0e2de6;
   padding: 3.8rem 1rem;
-  position: fixed;
+  position: sticky;
   bottom: 0px;
   width: 100%;
   text-align: center;
@@ -126,6 +149,11 @@ footer {
     position: fixed;
     top: 150px;
     right: 0px;
+  }
+
+  img {
+    width: 260px;
+    height: 200px;
   }
 
   .result-card {
@@ -151,6 +179,11 @@ footer {
     position: fixed;
     top: 150px;
     right: 0px;
+  }
+
+  img {
+    width: 260px;
+    height: 200px;
   }
 }
 
@@ -178,5 +211,11 @@ footer {
     position: fixed;
     top: 150px;
     right: 0px;
+  }
+
+  img {
+    width: 400px;
+    height: 270px;
+    margin-bottom: 1rem;
   }
 }
