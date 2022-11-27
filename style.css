@@ -86,6 +86,12 @@ img {
   border-radius: 0.5rem;
 }
 
+.validMsg {
+  padding: 1rem 0;
+  color: white;
+  font-weight: 500;
+}
+
 #privacyMsg {
   width: 400px;
   text-align: center;

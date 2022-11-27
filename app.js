@@ -7,6 +7,7 @@ let privacyMsg = document.querySelector("#privacyMsg");
 let btnClose = document.querySelector("#close-button");
 let footer = document.querySelector(".footer");
 let resultCard = document.querySelector(".result-card");
+let validMsgText = document.querySelector(".validMsg");
 
 window.addEventListener("load", hidePrivacyMsg);
 // privacyMsg.style.display = "none";
@@ -27,6 +28,11 @@ function btnClickHandler() {
   const luckyNumber = numberInput.value;
   console.log(dateValue);
   console.log(luckyNumber);
+
+  if (luckyNumber <= 0) {
+    validMsgText.innerText = "Number must be greater than 0";
+    return;
+  }
 
   let birthDate = parseInt(dateValue.split("-").join(""));
   console.log(birthDate);
